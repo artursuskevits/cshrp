@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,7 +84,7 @@ namespace cshrp
             /*Console.WriteLine("Arv 1: ");
 
             int arv1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Arv 2: ");
+            Console.WriteLine("Arv 1: ");
             int arv2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Tehe: ");
             char tehe = char.Parse(Console.ReadLine());
@@ -131,6 +132,7 @@ namespace cshrp
                 Console.WriteLine(item);
             }
             */
+            /*
             Random rnd = new Random();
             int arv1 = rnd.Next(-10, 20);
             int arv2 = rnd.Next(-10,20);
@@ -221,10 +223,87 @@ namespace cshrp
                     Console.WriteLine(arvud[i]);
                 }
             }
+            */
+            /*
+            Console.WriteLine("kirjuta esimine arv");
+            int arv1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("kirjuta teine arv");
+            int arv2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("kirjuta kolmas arv");
+            int arv3 = int.Parse(Console.ReadLine());
+            Console.WriteLine("kirjuta neljas arv");
+            int arv4 = int.Parse(Console.ReadLine());
+            Console.WriteLine("kirjuta viies arv");
+            int arv5 = int.Parse(Console.ReadLine());
+            int[] numbers = new int[5];
+            numbers[0] = arv1;
+            numbers[1] = arv2;
+            numbers[2] = arv3;
+            numbers[3] = arv4;
+            numbers[4] = arv5;
+            int summ = arv1 + arv2 + arv3 + arv4 + arv5;
+            int keskmine = (arv1 + arv2 + arv3 + arv4 + arv5) / 5;
+            int korrutis= arv1*arv2*arv3* arv4 * arv5;
+            Console.WriteLine("summa: " + summ);
+            Console.WriteLine("keskmine: " + keskmine);
+            Console.WriteLine("korritus: " + korrutis);
+            */
+            /*
+            string answer = "0";
+            while ( answer!="elephant")
+            {
+                Console.WriteLine("Osta elevant ära!");
+                 answer = Console.ReadLine();
+            }
+            */
+            /*
+            Random rnd = new Random();
+            int nr = rnd.Next(0, 9);
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("krijuta arv ");
+                int answer = int.Parse(Console.ReadLine());
+                if (nr==answer)
+                {
+                    Console.WriteLine("oige!");
+                }
+                
+            }
+            Console.WriteLine("arvuti arv on " + nr);  
+            */
+            /*
+            Console.WriteLine("kirjuta esimine arv");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("kirjuta teine arv");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("kirjuta kolmane arv");
+            int c = int.Parse(Console.ReadLine());
+            Console.WriteLine("kirjuta nelja arv");
+            int d = int.Parse(Console.ReadLine());
+
+            List<int> numbers = new List<int> { a, b, c, d };
+            int maxNumber = numbers.Max();
+            numbers.Remove(maxNumber);
+            int secondNumber = numbers.Max();
+            numbers.Remove(secondNumber);
+            int thirdNumber = numbers.Max();
+            numbers.Remove(thirdNumber);
+            int fourthNumber = numbers.Max();
+            numbers.Remove(fourthNumber);
+            string result = maxNumber.ToString() + secondNumber.ToString() + thirdNumber.ToString() + fourthNumber.ToString();
+            Console.WriteLine(result);
+            */
             
-
+            for (int i = 1; i <= 10; i++)
+            {
+                
+                for (int j = 1; j <= 9; j++)
+                {
+                    Console.Write("{0,4}", i * j);
+                }
+                Console.WriteLine();
+            }
         }
-
 
     }
 }
