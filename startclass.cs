@@ -248,14 +248,20 @@ namespace cshrp
             Console.WriteLine("keskmine: " + keskmine);
             Console.WriteLine("korritus: " + korrutis);
             */
-            /*
-            string answer = "0";
-            while ( answer!="elephant")
-            {
-                Console.WriteLine("Osta elevant ära!");
-                 answer = Console.ReadLine();
-            }
-            */
+
+            //string answer = "0";
+            //while (answer != "elephant")
+            //{
+            //    Console.WriteLine("Osta elevant ära!");
+            //    answer = Console.ReadLine();
+            //}
+            //string answer;
+            //do
+            //{
+            //    Console.WriteLine("Osta elevant ära!");
+            //    answer = Console.ReadLine();
+            //} while (answer != "elephant");
+
             /*
             Random rnd = new Random();
             int nr = rnd.Next(0, 9);
@@ -291,9 +297,10 @@ namespace cshrp
             int fourthNumber = numbers.Max();
             numbers.Remove(fourthNumber);
             string result = maxNumber.ToString() + secondNumber.ToString() + thirdNumber.ToString() + fourthNumber.ToString();
-            Console.WriteLine(result);
+            Console.WriteLine(Convert.ToInt32(result));
             */
-            
+
+            /*
             for (int i = 1; i <= 10; i++)
             {
                 
@@ -302,7 +309,24 @@ namespace cshrp
                     Console.Write("{0,4}", i * j);
                 }
                 Console.WriteLine();
+              
             }
+            */
+
+            string name = "Python";
+            alamprog.TERE(name);
+            int a = 12;
+            int b = 13;
+            int vastus =alamprog.Korruta(a, b);
+            //Console.WriteLine(vastus);
+            //Console.WriteLine(alamprog.Korruta(5, 6));
+            //double c= alamprog.Keskmine();
+            //Console.WriteLine(c);
+            string c=alamprog.murr(12, 3,'*');
+            Console.WriteLine(c);
+
+            //alamprog.stars(12);
+            //alamprog.ultrastars();
         }
 
     }
