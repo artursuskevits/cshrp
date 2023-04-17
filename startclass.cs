@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -11,6 +12,132 @@ namespace cshrp
     {
         public static void Main(string[] args)
         {
+
+            
+            try
+            {
+                StreamWriter textik = new StreamWriter(@"..\..\..\text.txt",true);
+                string lause = "=)\n";
+                textik.WriteLine(lause);
+                textik.Close();
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Viga failiga!");
+            }
+
+            try
+            {
+                StreamReader text = new StreamReader(@"..\..\..\text.txt", true);
+                string laused = text.ReadToEnd();
+                text.Close();
+                
+
+
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Viga failiga!");
+            }
+            List<string> textlist = new List<string>();
+            try
+            {
+                foreach (string rida in File.ReadAllLines(@"..\..\..\text.txt"))
+                {
+                    textlist.Add(rida);
+                }
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Viga failiga!");
+            }
+            foreach (var rida in textlist)
+            {
+                Console.WriteLine(rida);
+            }
+
+
+            /*
+            ConsoleKeyInfo nupp = new ConsoleKeyInfo();
+            do
+            {
+                Console.WriteLine("Vajuta Backspace");
+                nupp = Console.ReadKey();
+            } while (nupp.Key != ConsoleKey.Backspace);
+            */
+            /*
+            List<inimine> list = new List<inimine>();
+            Dictionary<int,string> dic = new Dictionary<int,string>(5);
+            dic.Add(1, "üks");
+            dic.Add(2, "kaks");
+            dic.Add(3, "kolm");
+            dic.Add(4, "neli");
+            dic.Add(5, "viis");
+            foreach (KeyValuePair<int,string> keyValue in dic)
+            {
+                Console.WriteLine(keyValue.Key + "-" + keyValue.Value);
+            }
+            Dictionary<int, inimine> iniminedic = new Dictionary<int, inimine>();
+            iniminedic.Add(1, new inimine() { Nimi = "Alina", Vanus = 17 });
+            iniminedic.Add(2, new inimine() { Nimi = "Andrei", Vanus = 17 });
+            iniminedic.Add(3, new inimine() { Nimi = "Genadiy", Vanus = 17 });
+            iniminedic.Add(4, new inimine() { Nimi = "Vlad", Vanus = 17 });
+            foreach (inimine item in iniminedic.Values)
+            {
+                Console.WriteLine(item.Nimi+" "+item.Vanus);
+            }
+            
+            foreach (KeyValuePair<int, inimine> keyvalue in iniminedic)
+            {
+                Console.WriteLine(keyvalue.Key + "-" + keyvalue.Value.Nimi + " " + keyvalue.Value.Vanus);
+            }
+            */
+            //inimine inimene = new inimine();
+            //inimene.Nimi = "Mati";
+            //inimene.Vanus = 65;
+            //list.Add(inimene);
+            //list.Add(new inimine() { Nimi = "Kati" });
+
+            //foreach (inimine item in list)
+            //{
+            //    Console.WriteLine(item.Nimi);
+            //}
+
+            /*ArrayList arrayList = new ArrayList();
+            arrayList.Add("Esimine");
+            arrayList.Add("Teine");
+            arrayList.Add("Kolmas");
+            int prikol =Convert.ToInt32(arrayList.IndexOf("Teine") + 1);
+            if (arrayList.Contains("Teine"))
+            {
+                Console.WriteLine("ok");
+                Console.WriteLine("Teine asub kohal " + prikol.ToString());
+            }
+            else
+            {
+                Console.WriteLine("wrong command");
+            }
+            Console.WriteLine("Kokku jarjendis on "+arrayList.Count+ " elemente");
+            arrayList.Insert(3, "Neljas");
+            arrayList.Insert(4, "Viies");
+            arrayList.Sort();
+            foreach (string item in arrayList)
+            {
+                Console.Write(item + ", ");
+            }
+            arrayList.RemoveAt(0);
+            arrayList.Remove("Viies");
+            Console.WriteLine("\n");
+            foreach (string item in arrayList)
+            {
+                Console.Write(item + ", ");
+            }
+            arrayList.Clear();
+            */
+
             //    string paev = "";
             //    Random rnd = new Random();
             //    for (int i = 0; i < 10; i++)
@@ -313,17 +440,17 @@ namespace cshrp
             }
             */
 
-            string name = "Python";
-            alamprog.TERE(name);
-            int a = 12;
-            int b = 13;
-            int vastus =alamprog.Korruta(a, b);
-            //Console.WriteLine(vastus);
-            //Console.WriteLine(alamprog.Korruta(5, 6));
-            //double c= alamprog.Keskmine();
+            //string name = "Python";
+            //alamprog.TERE(name);
+            //int a = 12;
+            //int b = 13;
+            //int vastus =alamprog.Korruta(a, b);
+            ////Console.WriteLine(vastus);
+            ////Console.WriteLine(alamprog.Korruta(5, 6));
+            ////double c= alamprog.Keskmine();
+            ////Console.WriteLine(c);
+            //string c=alamprog.murr(12, 3,'*');
             //Console.WriteLine(c);
-            string c=alamprog.murr(12, 3,'*');
-            Console.WriteLine(c);
 
             //alamprog.stars(12);
             //alamprog.ultrastars();
